@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bibika">
+<title>Bibika</title><link rel="icon" type="image/png" href="data:image/png;base64,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"><link rel="apple-touch-icon" href="data:image/png;base64,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"><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--tx:#1b1d22;--mut:#6b7280;--ac:#0a66d8;--acx:#fff;--bd:#e3e5ea;--dg:#c62828;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1115;--card:#1a1d24;--tx:#eceef2;--mut:#9aa1ad;--ac:#4c9aff;--acx:#0b1220;--bd:#2a2e38;--dg:#ff6b6b}}
+:root[data-theme="dark"]{--bg:#0f1115;--card:#1a1d24;--tx:#eceef2;--mut:#9aa1ad;--ac:#4c9aff;--acx:#0b1220;--bd:#2a2e38;--dg:#ff6b6b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:8px 0 16px}h2{font-size:15px;margin:20px 0 8px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin-bottom:10px}
+.tap{cursor:pointer}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.mut{color:var(--mut);font-size:14px}
+button{font:inherit;border:0;border-radius:12px;padding:12px 16px;background:var(--ac);color:var(--acx);font-weight:600;width:100%;margin-top:8px}
+button.sec{background:var(--card);color:var(--ac);border:1px solid var(--bd)}
+button.dng{background:var(--card);color:var(--dg);border:1px solid var(--bd)}
+button.lnk{background:none;color:var(--ac);width:auto;padding:4px 0;margin:0;border:0}
+label{display:block;font-size:13px;color:var(--mut);margin:12px 0 4px}
+input,textarea{font:inherit;font-size:16px;width:100%;padding:11px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+textarea{min-height:80px;resize:vertical}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:2px 8px;font-size:13px;margin:2px 4px 0 0}
+.empty{text-align:center;color:var(--mut);padding:28px 8px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:20px;font-size:14px}
+.cb{position:relative}.dd{position:absolute;left:0;right:0;top:100%;z-index:30;max-height:230px;overflow:auto;background:var(--card);border:1px solid var(--bd);border-radius:10px;margin-top:2px;box-shadow:0 6px 18px rgba(0,0,0,.35)}.dd div{padding:12px;border-bottom:1px solid var(--bd)}.dd div:last-child{border:0}.dd[hidden]{display:none}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+var API='https://uebixmliogwnjgwhmkno.supabase.co/rest/v1',KEY='sb_publishable_XbVukEOItOEfanlWV9Gs6A_ixT_Z6XT';
+var SUPA='https://uebixmliogwnjgwhmkno.supabase.co';
+var FKEY='bz-fid',fid=null,fname='',CARS=[],V={name:'list'},loaded=false;
+try{fid=localStorage.getItem(FKEY)}catch(e){}
+function api(method,path,body,prefer,tok){
+  var h={apikey:KEY,'Content-Type':'application/json'};if(prefer)h.Prefer=prefer;if(tok)h.Authorization='Bearer '+tok;
+  return fetch(API+path,{method:method,headers:h,body:body?JSON.stringify(body):undefined}).then(function(r){
+    return r.text().then(function(t){if(!r.ok)throw new Error(t||r.status);return t?JSON.parse(t):null})})
+}
+
+var MODELS={
+'Toyota':'Camry,Corolla,RAV4,Land Cruiser,Land Cruiser Prado,Highlander,Yaris,Hilux,Auris,Avensis,C-HR,Prius,Alphard',
+'Lada (ВАЗ)':'Granta,Vesta,Niva Legend,Niva Travel,Largus,XRAY,Kalina,Priora,2107,2114,2110',
+'Kia':'Rio,Ceed,Sportage,Sorento,Optima,K5,Cerato,Soul,Seltos,Picanto,Stinger,Carnival',
+'Hyundai':'Solaris,Creta,Tucson,Santa Fe,Elantra,Sonata,i30,Accent,Palisade,Getz,Staria',
+'Volkswagen':'Polo,Golf,Passat,Tiguan,Jetta,Touareg,Transporter,Caddy,Touran,Arteon,Teramont',
+'Skoda':'Octavia,Rapid,Superb,Kodiaq,Karoq,Fabia,Yeti',
+'Renault':'Logan,Sandero,Duster,Kaptur,Arkana,Megane,Fluence,Clio,Captur',
+'Nissan':'Qashqai,X-Trail,Almera,Juke,Note,Murano,Tiida,Teana,Patrol,Leaf',
+'Mazda':'3,6,CX-5,CX-7,CX-9,2,MX-5',
+'Honda':'Civic,Accord,CR-V,Fit,HR-V,Pilot',
+'Mitsubishi':'Lancer,Outlander,ASX,Pajero,Pajero Sport,L200',
+'Ford':'Focus,Fiesta,Mondeo,Kuga,EcoSport,Transit,Explorer,Mustang',
+'Chevrolet':'Cruze,Aveo,Lacetti,Niva,Captiva,Spark,Malibu,Tahoe',
+'Opel':'Astra,Corsa,Insignia,Zafira,Mokka,Vectra',
+'Peugeot':'308,408,3008,207,206,2008,Partner',
+'Citroen':'C4,C3,C5,Berlingo,C-Elysee',
+'BMW':'1 Series,3 Series,5 Series,7 Series,X1,X3,X5,X6,X7',
+'Mercedes-Benz':'A-Class,C-Class,E-Class,S-Class,GLA,GLC,GLE,GLS,Sprinter,Vito,ML,Viano',
+'Audi':'A3,A4,A5,A6,A8,Q3,Q5,Q7,TT',
+'Volvo':'S60,S80,S90,V40,V60,XC40,XC60,XC90',
+'Lexus':'RX,NX,ES,IS,LX,GX,UX',
+'Subaru':'Forester,Outback,Impreza,XV,Legacy',
+'Suzuki':'Vitara,SX4,Swift,Jimny,Grand Vitara',
+'Geely':'Coolray,Atlas,Tugella,Monjaro,Emgrand,Okavango',
+'Chery':'Tiggo 4,Tiggo 7,Tiggo 7 Pro,Tiggo 8,Arrizo 8',
+'Haval':'Jolion,F7,F7x,H6,Dargo,H9',
+'Exeed':'TXL,VX,LX',
+'Changan':'UNI-K,UNI-V,CS35,CS55',
+'JAC':'JS4,S3,T6',
+'УАЗ':'Patriot,Hunter,Pickup,Profi',
+'ГАЗ':'Gazelle Next,Gazelle Business,Sobol,Volga',
+'Lifan':'X60,Solano,Smily',
+'Daewoo':'Nexia,Matiz,Gentra',
+'Land Rover':'Range Rover,Range Rover Sport,Discovery,Freelander,Defender,Evoque',
+'Jeep':'Wrangler,Grand Cherokee,Compass',
+'Porsche':'Cayenne,Macan,Panamera,911',
+'Tesla':'Model 3,Model Y,Model S,Model X',
+'Infiniti':'Q50,QX50,QX60,QX80',
+'Fiat':'Doblo,Ducato,500,Panda',
+'Mini':'Cooper,Countryman',
+'SEAT':'Leon,Ibiza'};
+var NH='https://vpic.nhtsa.dot.gov/api/vehicles',modelCache={};
+var ENG=(function(){var o=[],f=['бензин','дизель'],i,k;for(k=0;k<2;k++)for(i=0;i<=30;i+=2){var d=((10+i)/10).toFixed(1);if(k===1&&(10+i)<14)continue;o.push(d+' л '+f[k])}
+  o.push('Гібрид','Електро','Бензин + газ (ГБО)');return o})();
+var GB=['АКПП','МКПП','Варіатор','Робот','Електро (редуктор)'],ddOpts=[],ddId=null;
+function ddList(id){
+  if(id==='f_make')return Object.keys(MODELS).sort();
+  if(id==='f_model')return CURM;
+  if(id==='f_gearbox')return GB;
+  if(id==='f_engine')return ENG;
+  var y=new Date().getFullYear()+1,o=[];for(;y>=1980;y--)o.push(String(y));return o}
+function ddShow(el,all){
+  var id=el.id,q=all?'':el.value.trim().toLowerCase(),box=$('dd_'+id);
+  ddOpts=ddList(id).filter(function(o){return !q||o.toLowerCase().indexOf(q)>=0}).slice(0,60);ddId=id;
+  if(!ddOpts.length){box.hidden=true;return}
+  box.innerHTML=ddOpts.map(function(o,i){return'<div onclick="ddPick('+i+')">'+esc(o)+'</div>'}).join('');box.hidden=false
+}
+function ddPick(i){
+  var el=$(ddId);el.value=ddOpts[i];ddHide(1);
+  if(ddId==='f_make'){$('f_model').value='';updModels()}
+}
+function ddHide(now){setTimeout(function(){var b=document.querySelectorAll('.dd');var ae=document.activeElement&&document.activeElement.id;for(var i=0;i<b.length;i++)if(b[i].id!=='dd_'+ae)b[i].hidden=true},now?0:250)}
+function yearOpts(){var y=new Date().getFullYear()+1,o='';for(;y>=1980;y--)o+='<option value="'+y+'">';return o}
+function matchMake(n){n=(n||'').toLowerCase();var ks=Object.keys(MODELS);for(var i=0;i<ks.length;i++){if(ks[i].toLowerCase()===n||ks[i].toLowerCase().indexOf(n+' ')===0)return ks[i]}
+  return n?n.replace(/\w\S*/g,function(w){return w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()}):''}
+var CURM=[];function fillModels(list){CURM=list;var m=$('f_model');if(m&&document.activeElement===m)ddShow(m)}
+function updModels(){
+  var mk=matchMake($('f_make').value.trim()),base=MODELS[mk]?MODELS[mk].split(','):[];
+  fillModels(base);
+  if(!mk||modelCache[mk]!==undefined){if(modelCache[mk])fillModels(modelCache[mk]);return}
+  modelCache[mk]=null;
+  fetch(NH+'/GetModelsForMake/'+encodeURIComponent(mk)+'?format=json').then(function(r){return r.json()}).then(function(j){
+    var seen={},all=base.slice();all.forEach(function(m){seen[m.toLowerCase()]=1});
+    (j.Results||[]).forEach(function(x){var n=x.Model_Name;if(n&&!seen[n.toLowerCase()]){seen[n.toLowerCase()]=1;all.push(n)}});
+    all.sort();modelCache[mk]=all;if(matchMake($('f_make')&&$('f_make').value.trim())===mk)fillModels(all)
+  }).catch(function(){delete modelCache[mk]})
+}
+var WMI={TMB:'Skoda',WVW:'Volkswagen',WV1:'Volkswagen',WV2:'Volkswagen',WV3:'Volkswagen','3VW':'Volkswagen',XW8:'Volkswagen',LFV:'Volkswagen',LSV:'Volkswagen',WAU:'Audi',WA1:'Audi',TRU:'Audi',WBA:'BMW',WBS:'BMW',WBY:'BMW','5UX':'BMW','4US':'BMW',WDB:'Mercedes-Benz',WDC:'Mercedes-Benz',WDD:'Mercedes-Benz',WDF:'Mercedes-Benz',W1K:'Mercedes-Benz',W1N:'Mercedes-Benz',W1V:'Mercedes-Benz',WF0:'Ford','1FA':'Ford','1FT':'Ford','1FM':'Ford',VS6:'Ford',W0L:'Opel',WOL:'Opel',VF1:'Renault',X7L:'Renault',VF3:'Peugeot',VR3:'Peugeot',VF7:'Citroen',VR7:'Citroen',ZFA:'Fiat',WP0:'Porsche',YV1:'Volvo',YV4:'Volvo',VSS:'SEAT',KNA:'Kia',KND:'Kia',KNE:'Kia',KNM:'Kia',U5Y:'Kia',U6Y:'Kia',XWE:'Kia',KMH:'Hyundai',KMF:'Hyundai',TMA:'Hyundai',NLH:'Hyundai',Z94:'Hyundai',JTD:'Toyota',JTM:'Toyota',JTN:'Toyota',JT2:'Toyota',JT3:'Toyota',SB1:'Toyota',JTH:'Lexus',JTJ:'Lexus',JN1:'Nissan',JN8:'Nissan',Z8N:'Nissan',JMZ:'Mazda',JM1:'Mazda',JM3:'Mazda',JHM:'Honda',SHH:'Honda',JA3:'Mitsubishi',JA4:'Mitsubishi',JMB:'Mitsubishi',MMB:'Mitsubishi',JF1:'Subaru',JF2:'Subaru',JS3:'Suzuki',TSM:'Suzuki',MA3:'Suzuki','1G1':'Chevrolet','5YJ':'Tesla','7SA':'Tesla',SAL:'Land Rover',L6T:'Geely',LB3:'Geely',LVV:'Chery',LGW:'Haval',LS5:'Changan',XTA:'Lada (ВАЗ)',XTT:'УАЗ',X96:'ГАЗ','1J4':'Jeep','1C4':'Jeep'};
+var CYR={'А':'A','В':'B','С':'C','Е':'E','Н':'H','К':'K','М':'M','Р':'P','Т':'T','Х':'X','О':'0','І':'1'};
+function normVin(v){return String(v||'').toUpperCase().replace(/[АВСЕНКМРТХОІ]/g,function(ch){return CYR[ch]}).replace(/[IQO]/g,function(ch){return ch==='I'?'1':'0'}).replace(/[^A-Z0-9]/g,'')}
+function vinYear(v){
+  var s='ABCDEFGHJKLMNPRSTVWXY123456789',k=s.indexOf(v.charAt(9));if(k<0)return '';
+  var y=2010+k,max=new Date().getFullYear()+1;if(y>max)y-=30;return y>=1980?String(y):''}
+function vinMake(v){return WMI[v.substr(0,3)]||''}
+function decodeVin(){
+  var v=normVin($('f_vin').value);$('f_vin').value=v;
+  if(v.length!==17){toast('VIN складається з 17 знаків');return}
+  var lm=vinMake(v),ly=vinYear(v);
+  if(lm){$('f_make').value=lm;updModels()}
+  if(ly)$('f_year').value=ly;
+  var part=lm||ly;
+  toast('Шукаю дані…');
+  fetch(NH+'/DecodeVinValues/'+v+'?format=json').then(function(r){return r.json()}).then(function(j){
+    var r=j.Results&&j.Results[0]||{};
+    if(!r.Make){toast(part?'Марку й рік визначено за VIN, модель оберіть зі списку':'За цим VIN нічого не знайдено, введіть вручну');return}
+    var mk=matchMake(r.Make);$('f_make').value=mk;updModels();
+    if(r.Model)$('f_model').value=r.Model;if(r.ModelYear)$('f_year').value=r.ModelYear;
+    var en=[];if(r.DisplacementL)en.push(parseFloat(r.DisplacementL).toFixed(1)+' л');
+    if(r.EngineHP)en.push(Math.round(parseFloat(r.EngineHP))+' к.с.');
+    var fu={'Gasoline':'бензин','Diesel':'дизель','Electric':'електро'}[r.FuelTypePrimary];if(fu)en.push(fu);
+    if(en.length)$('f_engine').value=en.join(' ');
+    var t=r.TransmissionStyle||'',g=/Continuously/i.test(t)?'Варіатор':/Dual|Clutch/i.test(t)?'Робот':/Auto/i.test(t)?'АКПП':/Manual|Standard/i.test(t)?'МКПП':'';
+    if(g)$('f_gearbox').value=g;
+    toast('Заповнено, перевірте дані')
+  }).catch(function(){toast(part?'Марку й рік визначено за VIN, модель оберіть зі списку':'Не вдалося зв’язатися з довідником')})
+}
+function validEmail(e){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)}
+function garage(body){
+  return fetch(SUPA+'/functions/v1/garage',{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){
+    return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||String(r.status));return j})})
+}
+function mailErr(e){var m=(e&&e.message)||'';return m==='no_email'?'До гаража не прив’язано e-mail. Натисніть «Змінити e-mail гаража»':m==='has_email'?'До цього гаража вже прив’язано e-mail':m==='limit'?'Забагато спроб, спробуйте через годину':m==='email'?'Перевірте e-mail':'Не вдалося надіслати лист, спробуйте пізніше'}
+function notifyEvt(type,extra){try{garage(Object.assign({action:'event',type:type,family_id:fid},extra)).catch(function(){})}catch(e){}}
+function recoverCab(){
+  var em=$('r_email').value.trim().toLowerCase();if(!validEmail(em)){toast('Перевірте e-mail');return}
+  garage({action:'recover',email:em}).then(function(){toast('Якщо такий e-mail є в базі, ми надіслали лист із кодом');V={name:'list'};render()},function(e){toast(mailErr(e))})
+}
+var reminding=false;
+function remindCode(){
+  if(reminding)return;reminding=true;
+  garage({action:'remind',family_id:fid}).then(function(r){reminding=false;toast('Код надіслано на '+r.to)},function(e){reminding=false;toast(mailErr(e))})
+}
+function attachMail(){
+  var em=(prompt('Ваш e-mail для відновлення коду гаража:')||'').trim().toLowerCase();if(!em)return;
+  if(!validEmail(em)){toast('Перевірте e-mail');return}
+  garage({action:'attach',email:em,family_id:fid}).then(function(r){toast(r.mailed===false?'E-mail прив’язано, але лист не надіслався':'Код гаража надіслано на e-mail')},function(e){toast(mailErr(e))})
+}
+function uid(){return Math.random().toString(36).slice(2,10).replace(/[^a-z0-9]/g,'x')}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function car(id){return CARS.filter(function(c){return c.id===id})[0]}
+function fd(d){if(!d)return'';var p=d.split('-');return p[2]+'.'+p[1]+'.'+p[0]}
+function fk(k){return k===''||k==null?'':Number(k).toLocaleString('uk-UA')+' км'}
+function logs(c){return (c.logs||[]).slice().sort(function(a,b){return b.date.localeCompare(a.date)||b.km-a.km})}
+function title(c){return [c.make,c.model,c.year].filter(Boolean).join(' ')}
+function toast(t){var d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2500)}
+function $(i){return document.getElementById(i)}
+function go(name,id,lid){V={name:name,id:id,lid:lid};render();window.scrollTo(0,0)}
+function fail(e){toast('Помилка зв’язку, спробуйте ще раз')}
+function strip(c){var o={};Object.keys(c).forEach(function(k){if(k!=='id')o[k]=c[k]});return o}
+function saveRow(c){return api('POST','/cars?on_conflict=id',{id:c.id,family_id:fid,data:strip(c),updated_at:new Date().toISOString()},'resolution=merge-duplicates,return=minimal')}
+
+function loadCars(){
+  if(!fid)return;
+  api('GET','/families?id=eq.'+encodeURIComponent(fid)+'&select=name').then(function(r){fname=r&&r[0]?r[0].name:'';if(V.name==='list')render()}).catch(function(){});
+  api('GET','/cars?family_id=eq.'+encodeURIComponent(fid)+'&select=id,data&order=updated_at.asc').then(function(rows){
+    CARS=rows.map(function(r){var o=r.data;o.id=r.id;return o});loaded=true;
+    if(V.name==='list'||V.name==='car')render();
+  }).catch(function(){loaded=true;toast('Не вдалося завантажити дані');render()});
+}
+function setFid(f){fid=f;try{localStorage.setItem(FKEY,f)}catch(e){}V={name:'list'};loaded=false;CARS=[];render();loadCars()}
+var creating=false;
+function createCab(){
+  var n=$('c_name').value.trim(),em=$('c_email').value.trim().toLowerCase();
+  if(!n){toast('Введіть назву гаража');return}
+  if(!validEmail(em)){toast('Введіть e-mail');return}
+  if(creating)return;creating=true;
+  var btn=document.querySelector('button[onclick="createCab()"]');if(btn){btn.disabled=true;btn.textContent='Створюю…'}
+  garage({action:'create',name:n,email:em}).then(function(r){creating=false;fname=n;setFid(r.id);toast(r.mailed===false?'Гараж створено, але лист не надіслався. Пізніше натисніть «Нагадати код гаража на пошту»':'Гараж створено. Код надіслано на e-mail')},function(e){creating=false;if(btn){btn.disabled=false;btn.textContent='Створити'}toast(mailErr(e))})
+}
+function joinCab(){
+  var f=$('c_code').value.trim().toLowerCase();if(!f)return;
+  api('GET','/families?id=eq.'+encodeURIComponent(f)+'&select=id').then(function(r){if(r&&r.length)setFid(f);else toast('Гараж із таким кодом не знайдено')},fail)
+}
+function leaveCab(){if(confirm('Вийти з гаража? Дані не видаляться, увійти знову можна за кодом.')){try{localStorage.removeItem(FKEY)}catch(e){}fid=null;CARS=[];render()}}
+
+function shareLast(id){
+  var c=car(id),l=logs(c)[0],url=location.href.split('#')[0]+'#last-'+fid+'-'+id;
+  var t=title(c)+(c.engine?', '+c.engine:'')+(c.gearbox?', '+c.gearbox:'')+(c.vin?'\nVIN: '+c.vin:'')+
+   '\n\nОстаннє ТО: '+fd(l.date)+(l.km?', пробіг '+fk(l.km):'')+(l.work?'\nРоботи: '+l.work:'')+(l.oil?'\nОлива: '+l.oil:'')+(l.notes?'\n'+l.notes:'')+'\n\nПосилання: '+url;
+  if(navigator.share){navigator.share({text:t}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('Скопійовано')},function(){prompt('Скопіюйте текст:',t)})}
+  else prompt('Скопіюйте текст:',t)
+}
+function fc(v){return Number(v).toLocaleString('uk-UA')+' грн'}
+function totalCost(c){return (c.logs||[]).reduce(function(a,l){return a+(Number(l.cost)||0)},0)}
+function sendText(t){
+  if(navigator.share){navigator.share({text:t}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('Скопійовано')},function(){prompt('Скопіюйте текст:',t)})}
+  else prompt('Скопіюйте текст:',t)
+}
+function shareAll(id){
+  var c=car(id),L=logs(c).reverse(),tot=totalCost(c),url=location.href.split('#')[0]+'#hist-'+fid+'-'+id;
+  var t=title(c)+(c.engine?', '+c.engine:'')+(c.gearbox?', '+c.gearbox:'')+(c.vin?'\nVIN: '+c.vin:'')+'\n\nІсторія обслуговування:';
+  L.forEach(function(l){t+='\n• '+fd(l.date)+(l.km?', '+fk(l.km):'')+(l.work?': '+l.work.replace(/\n+/g,'; '):'')+(l.oil?'. Олива: '+l.oil:'')+(l.cost?'. '+fc(l.cost):'')});
+  if(tot)t+='\n\nВсього витрачено: '+fc(tot);
+  sendText(t+'\n\nПосилання: '+url)
+}
+function logCard(l,attr){
+  return '<div class="card tap" '+(attr||'')+'><div class="row"><b>'+fd(l.date)+'</b><span class="mut">'+fk(l.km)+'</span></div>'+
+  (l.work?'<div style="margin-top:6px;white-space:pre-wrap">'+esc(l.work)+'</div>':'')+(l.oil?'<div class="mut" style="margin-top:6px">🛢 Олива: '+esc(l.oil)+'</div>':'')+(l.cost?'<div class="mut" style="margin-top:4px">💰 '+fc(l.cost)+'</div>':'')+
+  (l.notes?'<div class="mut" style="margin-top:4px;white-space:pre-wrap">'+esc(l.notes)+'</div>':'')+'</div>';
+}
+function renderShared(f,cid,mode){
+  var a=$('app');a.innerHTML='<h1>🚗 Останнє ТО</h1><div class="empty">Завантаження…</div>';
+  api('GET','/cars?id=eq.'+encodeURIComponent(cid)+'&family_id=eq.'+encodeURIComponent(f)+'&select=data').then(function(r){
+    if(!r||!r.length){a.innerHTML='<h1>🚗 Останнє ТО</h1><div class="empty">Запис не знайдено.</div>';return}
+    var c=r[0].data,l=logs(c)[0];
+    a.innerHTML='<h1>'+esc(title(c))+'</h1><div class="card">'+(c.engine?'<span class="tag">Двигун: '+esc(c.engine)+'</span>':'')+(c.gearbox?'<span class="tag">Коробка: '+esc(c.gearbox)+'</span>':'')+
+    (c.vin?'<div class="mut" style="margin-top:8px">VIN: <b style="color:var(--tx)">'+esc(c.vin)+'</b></div>':'')+'</div><h2>'+(mode==='hist'?'Історія обслуговування':'Останнє ТО')+'</h2>'+(mode==='hist'?(logs(c).map(function(x){return logCard(x)}).join('')||'<div class="empty">Записів поки немає.</div>'):(l?logCard(l):'<div class="empty">Записів поки немає.</div>'))+
+    '<button class="sec" onclick="location.hash=\'\'">Відкрити мій журнал</button>';
+  }).catch(function(){a.innerHTML='<h1>🚗 Останнє ТО</h1><div class="empty">Не вдалося завантажити.</div>'})
+}
+function render(){
+  var a=$('app'),h='',m=(location.hash||'').match(/^#(last|hist)-([a-z0-9]+)-([a-z0-9]+)$/);
+  if(m){renderShared(m[2],m[3],m[1]);return}
+  if(V.name==='recover'){
+    a.innerHTML='<button class="lnk" onclick="V={name:\'list\'};render()">‹ Назад</button><h1>Відновлення коду</h1><div class="mut">Введіть e-mail, який ви вказували для гаража. Якщо він є в базі, ми надішлемо на нього код.</div><label>Ваш e-mail</label><input id="r_email" type="email" inputmode="email" autocapitalize="off"><button onclick="recoverCab()">Надіслати код</button>';return}
+  if(!fid){
+    a.innerHTML='<h1>🚗 Bibika</h1><div class="card"><b>Створити свій гараж</b><label>Назва гаража</label><input id="c_name" placeholder="Родина Іванових, Мій, Фірма"><label>E-mail (надішлемо на нього код гаража)</label><input id="c_email" type="email" inputmode="email" autocapitalize="off" placeholder="name@example.com"><button onclick="createCab()">Створити</button></div>'+
+    '<div class="card"><b>Увійти в наявний гараж</b><div class="mut">Код вам надасть той, хто створив гараж.</div><label>Код гаража</label><input id="c_code" autocapitalize="off"><button class="sec" onclick="joinCab()">Увійти</button></div><button class="lnk" onclick="V={name:\'recover\'};render()">Забули код? Відновити за e-mail</button><div class="mut" style="margin-top:22px;line-height:1.5"><b style="color:var(--tx)">Що це?</b><br>Bibika — спільний журнал обслуговування авто. Записуйте, що і коли міняли та на якому пробігу, і завжди матимете під рукою, що робили востаннє. Гараж — це ваш особистий простір: у ньому можуть бути авто родини, компанії або лише ваше. Усі, хто має код гаража, бачать одні й ті самі записи.</div>';
+    return}
+  if(V.name==='list'){
+    h='<h1>🚗 '+esc(fname||'Наші авто')+'</h1><div style="height:12px"></div>';
+    if(!loaded)h+='<div class="empty">Завантаження…</div>';
+    else if(!CARS.length)h+='<div class="empty">Поки жодного авто.<br>Додайте перше.</div>';
+    CARS.forEach(function(c){
+      var l=logs(c)[0];
+      h+='<div class="card tap" onclick="go(\'car\',\''+c.id+'\')"><div class="row"><b>'+esc(title(c)||'Без назви')+'</b><span class="mut">'+(c.logs||[]).length+' зап.</span></div>'+
+      '<div class="mut">'+(l?'Останнє ТО: '+fd(l.date)+', '+fk(l.km):'Записів ще немає')+'</div></div>';
+    });
+    h+='<button onclick="go(\'carform\')">+ Додати авто</button><button class="sec" onclick="loadCars()">Оновити</button><button class="sec" onclick="remindCode()">Нагадати код гаража на пошту</button><button class="sec" onclick="attachMail()">Змінити e-mail гаража</button><button class="lnk" style="margin-top:20px" onclick="leaveCab()">Змінити гараж</button>';
+  }
+  else if(V.name==='car'){
+    var c=car(V.id);if(!c){go('list');return}
+    var L=logs(c),tot=totalCost(c);
+    h='<button class="lnk" onclick="go(\'list\')">‹ Усі авто</button><h1>'+esc(title(c))+'</h1>';
+    h+='<div class="card">'+(c.engine?'<span class="tag">Двигун: '+esc(c.engine)+'</span>':'')+(c.gearbox?'<span class="tag">Коробка: '+esc(c.gearbox)+'</span>':'')+
+      (c.vin?'<div class="mut" style="margin-top:8px">VIN: <b style="color:var(--tx);user-select:all">'+esc(c.vin)+'</b></div>':'')+
+      '<button class="lnk" onclick="go(\'carform\',\''+c.id+'\')">Змінити дані</button></div>';
+    h+='<button onclick="go(\'logform\',\''+c.id+'\')">+ Додати запис ТО</button>';
+    if(L.length)h+='<button class="sec" onclick="shareLast(\''+c.id+'\')">Поділитися останнім ТО</button><button class="sec" onclick="shareAll(\''+c.id+'\')">Поділитися всією історією</button>';
+    h+='<h2>Історія'+(tot?' · всього '+fc(tot):'')+'</h2>'+(L.length?'':'<div class="empty">Записів поки немає.</div>');
+    L.forEach(function(l){h+=logCard(l,'onclick="go(\'logform\',\''+c.id+'\',\''+l.id+'\')"')});
+  }
+  else if(V.name==='carform'){
+    var e=V.id?car(V.id):{};
+    h='<button class="lnk" onclick="go(\''+(V.id?'car\',\''+V.id:'list')+'\')">‹ Назад</button><h1>'+(V.id?'Дані авто':'Нове авто')+'</h1>'+
+    '<label>VIN (17 знаків)</label><input id="f_vin" maxlength="17" autocapitalize="characters" value="'+esc(e.vin)+'"><button class="sec" onclick="decodeVin()">Заповнити за VIN</button>'+
+    '<div class="mut" style="margin-top:6px">Марку, модель, рік і двигун можна вибрати зі списку або ввести вручну.</div>'+
+    '<div class="g2"><div class="cb"><label>Марка</label><input id="f_make" autocomplete="off" onfocus="ddShow(this,1)" oninput="ddShow(this);updModels()" onblur="ddHide()" value="'+esc(e.make)+'"><div class="dd" id="dd_f_make" hidden></div></div><div class="cb"><label>Модель</label><input id="f_model" autocomplete="off" onfocus="ddShow(this,1)" oninput="ddShow(this)" onblur="ddHide()" value="'+esc(e.model)+'"><div class="dd" id="dd_f_model" hidden></div></div></div>'+
+    '<div class="g2"><div class="cb"><label>Рік випуску</label><input id="f_year" inputmode="numeric" autocomplete="off" onfocus="ddShow(this,1)" oninput="ddShow(this)" onblur="ddHide()" value="'+esc(e.year)+'"><div class="dd" id="dd_f_year" hidden></div></div><div class="cb"><label>Коробка</label><input id="f_gearbox" autocomplete="off" onfocus="ddShow(this,1)" oninput="ddShow(this)" onblur="ddHide()" value="'+esc(e.gearbox)+'"><div class="dd" id="dd_f_gearbox" hidden></div></div></div>'+
+    '<div class="cb" style="margin-top:12px"><label style="margin-top:0">Двигун</label><input id="f_engine" autocomplete="off" placeholder="оберіть або впишіть, наприклад 2.0 л 150 к.с. бензин" onfocus="ddShow(this,1)" oninput="ddShow(this)" onblur="ddHide()" value="'+esc(e.engine)+'"><div class="dd" id="dd_f_engine" hidden></div></div>'+
+    '<button onclick="saveCar()">Зберегти</button>'+(V.id?'<button class="dng" onclick="delCar()">Видалити авто</button>':'');
+  }
+  else if(V.name==='logform'){
+    var c2=car(V.id),l2=V.lid?(c2.logs||[]).filter(function(x){return x.id===V.lid})[0]:{},last=logs(c2)[0];
+    h='<button class="lnk" onclick="go(\'car\',\''+V.id+'\')">‹ '+esc(title(c2))+'</button><h1>'+(V.lid?'Запис ТО':'Новий запис')+'</h1>'+
+    '<div class="g2"><div><label>Дата</label><input id="l_date" type="date" value="'+esc(l2.date||new Date().toISOString().slice(0,10))+'"></div>'+
+    '<div><label>Пробіг, км</label><input id="l_km" type="number" inputmode="numeric" placeholder="'+(last?esc(last.km):'')+'" value="'+esc(l2.km)+'"></div></div>'+
+    '<label>Що зробили / замінили</label><textarea id="l_work" placeholder="Олива й фільтр, повітряний фільтр, колодки…">'+esc(l2.work)+'</textarea>'+
+        '<label>Вартість, грн</label><input id="l_cost" type="number" inputmode="decimal" value="'+esc(l2.cost)+'">'+
+    '<label>Нотатки (сервіс тощо)</label><textarea id="l_notes">'+esc(l2.notes)+'</textarea>'+
+    '<button onclick="saveLog()">Зберегти</button>'+(V.lid?'<button class="dng" onclick="delLog()">Видалити запис</button>':'');
+  }
+  a.innerHTML=h;
+  if(V.name==='carform')updModels();
+}
+function saveCar(){
+  var o={make:$('f_make').value.trim(),model:$('f_model').value.trim(),year:$('f_year').value.trim(),gearbox:$('f_gearbox').value.trim(),engine:$('f_engine').value.trim(),vin:normVin($('f_vin').value)};
+  if(!o.make&&!o.model){toast('Вкажіть марку або модель');return}
+  if(V.id){var c=car(V.id),old=JSON.stringify(strip(c));Object.keys(o).forEach(function(k){c[k]=o[k]});saveRow(c).then(function(){go('car',V.id)},fail)}
+  else{o.id=uid();o.logs=[];saveRow(o).then(function(){CARS.push(o);notifyEvt('new_car',{car:o});go('car',o.id)},fail)}
+}
+function delCar(){if(confirm('Видалити авто та всю його історію?'))api('DELETE','/cars?id=eq.'+encodeURIComponent(V.id),null,'return=minimal').then(function(){CARS=CARS.filter(function(c){return c.id!==V.id});go('list')},fail)}
+function saveLog(){
+  var o={date:$('l_date').value,km:$('l_km').value,work:$('l_work').value.trim(),cost:$('l_cost').value.trim(),notes:$('l_notes').value.trim()};
+  if(!o.date){toast('Вкажіть дату');return}
+  var c=car(V.id),arr=(c.logs||[]).slice();
+  if(V.lid){arr=arr.map(function(x){return x.id===V.lid?Object.assign({},x,o):x})}else{o.id=uid();arr.push(o)}
+  var isNew=!V.lid;c.logs=arr;saveRow(c).then(function(){if(isNew)notifyEvt('new_record',{car:c,log:o});go('car',V.id)},fail)
+}
+function delLog(){
+  if(!confirm('Видалити запис?'))return;
+  var c=car(V.id);c.logs=(c.logs||[]).filter(function(x){return x.id!==V.lid});
+  saveRow(c).then(function(){go('car',V.id)},fail)
+}
+window.addEventListener('hashchange',render);
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&(V.name==='list'||V.name==='car'))loadCars()});
+render();loadCars();
+</script>
+</body>
+</html>
